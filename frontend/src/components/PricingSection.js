@@ -203,34 +203,40 @@ const PricingSection = () => {
                   </thead>
                   <tbody className="text-sm">
                     <tr className="border-b border-slate-100">
-                      <td className="py-3 text-slate-600">Ad Creation/Design</td>
+                      <td className="py-3 text-slate-600">Initiation Fee</td>
+                      <td className="text-center py-3">$15 one-time</td>
+                      <td className="text-center py-3 text-emerald-600">✓ Waived</td>
+                      <td className="text-center py-3 text-emerald-600">✓ Waived</td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-3 text-slate-600">Ad Creation</td>
+                      <td className="text-center py-3">$20 fee</td>
                       <td className="text-center py-3">$20 fee</td>
                       <td className="text-center py-3 text-emerald-600">✓ Free</td>
-                      <td className="text-center py-3 text-emerald-600">✓ Free</td>
                     </tr>
                     <tr className="border-b border-slate-100">
-                      <td className="py-3 text-slate-600">Featured Placement</td>
+                      <td className="py-3 text-slate-600">Ad Redesigns</td>
+                      <td className="text-center py-3">$20 each</td>
+                      <td className="text-center py-3 text-emerald-600">3 free/year</td>
+                      <td className="text-center py-3 text-emerald-600">4 free/year</td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-3 text-slate-600">Featured Status</td>
                       <td className="text-center py-3">—</td>
-                      <td className="text-center py-3 text-emerald-600">4x/year</td>
-                      <td className="text-center py-3 text-emerald-600">Priority</td>
+                      <td className="text-center py-3 text-emerald-600">4 months/year</td>
+                      <td className="text-center py-3 text-emerald-600">Business of Month</td>
                     </tr>
                     <tr className="border-b border-slate-100">
-                      <td className="py-3 text-slate-600">Display Time</td>
+                      <td className="py-3 text-slate-600">Additional Showings</td>
                       <td className="text-center py-3">Standard</td>
-                      <td className="text-center py-3 text-emerald-600">2x Standard</td>
-                      <td className="text-center py-3 text-emerald-600">2x Standard</td>
-                    </tr>
-                    <tr className="border-b border-slate-100">
-                      <td className="py-3 text-slate-600">TV Installations</td>
-                      <td className="text-center py-3">—</td>
-                      <td className="text-center py-3">—</td>
-                      <td className="text-center py-3 text-emerald-600">2 TVs</td>
+                      <td className="text-center py-3 text-emerald-600">+2 per rotation</td>
+                      <td className="text-center py-3 text-emerald-600">+2 per rotation</td>
                     </tr>
                     <tr>
-                      <td className="py-3 text-slate-600">Account Manager</td>
+                      <td className="py-3 text-slate-600">Free TVs + Mounting</td>
                       <td className="text-center py-3">—</td>
                       <td className="text-center py-3">—</td>
-                      <td className="text-center py-3 text-emerald-600">✓ Dedicated</td>
+                      <td className="text-center py-3 text-emerald-600">✓ 2 x 32" TVs</td>
                     </tr>
                   </tbody>
                 </table>
