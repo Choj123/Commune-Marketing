@@ -165,9 +165,9 @@ const JoinCTASection = () => {
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
               >
-                <option value="Prime">Prime - $79.99/mo</option>
-                <option value="Ultimate">Ultimate Yearly - $849.99/yr</option>
-                <option value="Platinum">Platinum+ - $999.99/yr</option>
+                <option value="Prime Monthly">Prime Monthly - $79.99/mo</option>
+                <option value="Ultimate Yearly">Ultimate Yearly - $849.99/yr</option>
+                <option value="Platinum+">Platinum+ - $999.99/yr</option>
               </select>
             </div>
 
