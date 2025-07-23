@@ -7,21 +7,21 @@ const TestimonialsSection = () => {
       quote: "Since joining, we've had consistent walk-ins who found us just by seeing our ad across town. The exposure has been incredible!",
       author: "Sarah Martinez",
       business: "Local Café Owner",
-      image: "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMG5ldHdvcmt8ZW58MHx8fHwxNzUzMzA4NTY2fDA&ixlib=rb-4.1.0&q=85",
+      image: "https://images.unsplash.com/photo-1610896011699-bf6f466b024e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXJzfGVufDB8fHx8MTc1MzMwOTk3OXww&ixlib=rb-4.1.0&q=85",
       rating: 5
     },
     {
       quote: "The Community Advertising Group transformed our visibility. We're reaching customers we never could have reached before.",
       author: "Mike Thompson",
       business: "Barbershop Owner",
-      image: "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMG5ldHdvcmt8ZW58MHx8fHwxNzUzMzA4NTY2fDA&ixlib=rb-4.1.0&q=85",
+      image: "https://images.unsplash.com/photo-1610896011699-bf6f466b024e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXJzfGVufDB8fHx8MTc1MzMwOTk3OXww&ixlib=rb-4.1.0&q=85",
       rating: 5
     },
     {
-      quote: "Professional service, amazing results. Our monthly revenue has increased by 30% since we started with them.",
+      quote: "Professional service, amazing results. Our business has grown significantly since we started with them.",
       author: "Lisa Chen",
       business: "Boutique Owner",
-      image: "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMG5ldHdvcmt8ZW58MHx8fHwxNzUzMzA4NTY2fDA&ixlib=rb-4.1.0&q=85",
+      image: "https://images.unsplash.com/photo-1610896011699-bf6f466b024e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXJzfGVufDB8fHx8MTc1MzMwOTk3OXww&ixlib=rb-4.1.0&q=85",
       rating: 5
     }
   ];
@@ -77,34 +77,6 @@ const TestimonialsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-emerald-50 rounded-2xl p-8"
-        >
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-emerald-600 mb-2">95%</div>
-              <div className="text-slate-600">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600 mb-2">30%</div>
-              <div className="text-slate-600">Average Revenue Increase</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600 mb-2">50+</div>
-              <div className="text-slate-600">Partner Businesses</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-emerald-600 mb-2">100K+</div>
-              <div className="text-slate-600">Monthly Impressions</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
