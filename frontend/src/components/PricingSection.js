@@ -7,18 +7,17 @@ const PricingSection = () => {
 
   const plans = [
     {
-      name: "Prime",
+      name: "Prime Monthly",
       price: "$79.99",
       period: "/mo",
-      yearlyPrice: "$850",
+      yearlyPrice: "$959.88",
       yearlyPeriod: "/yr",
       description: "Perfect for getting started with local advertising",
       features: [
-        "Ad in all member locations",
-        "$20 ad creation/redesign", 
-        "Monthly exposure reports",
-        "Basic customer support",
-        "Standard display time"
+        "Access to advertising slots in all member businesses",
+        "Advertisement creation for $20 (if needed)",
+        "Advertisement redesign for $20 (anytime)",
+        "One-time initiation fee: $15"
       ],
       popular: false,
       cta: "Get Started"
@@ -29,14 +28,13 @@ const PricingSection = () => {
       period: "/yr",
       yearlyPrice: "$849.99",
       yearlyPeriod: "/yr",
-      description: "Best value with premium features and savings",
+      description: "Discounted annual rate with premium benefits",
       features: [
-        "All Prime features included",
-        "Waived setup and design fees",
-        "Featured ad placement 4x/year",
-        "2x display time vs Prime",
-        "Priority customer support",
-        "Quarterly performance reviews"
+        "All Prime Monthly benefits included",
+        "No initiation fee (waived)",
+        "Featured Business status for 4 months of your choosing",
+        "Two additional showings per slide rotation",
+        "3 free advertisement redesigns per year"
       ],
       popular: true,
       cta: "Most Popular"
@@ -47,15 +45,15 @@ const PricingSection = () => {
       period: "/yr",
       yearlyPrice: "$999.99",
       yearlyPeriod: "/yr",
-      description: "Premium solution for maximum visibility",
+      description: "Our best membership with the most perks",
       features: [
-        "All Ultimate features included", 
-        "2 TV screen installations",
-        "Free professional ad creation",
-        "Free installation services",
-        "Dedicated account manager",
-        "Custom analytics dashboard",
-        "Priority ad placement"
+        "Two free 32\" smart TVs included",
+        "Business of the Month for 4 months of your choosing",
+        "Two additional showings per slide rotation",
+        "Free advertisement creation to your liking",
+        "4 free advertisement redesigns per year",
+        "Free TV mounting service",
+        "No initiation fee (waived)"
       ],
       popular: false,
       cta: "Best Value",
