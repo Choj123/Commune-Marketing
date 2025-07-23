@@ -7,7 +7,7 @@ const JoinCTASection = () => {
     businessName: '',
     phone: '',
     email: '',
-    plan: 'Prime',
+    plan: 'Prime Monthly',
     infoSession: false
   });
 
