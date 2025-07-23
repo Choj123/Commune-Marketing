@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
       rating: 5
     },
     {
-      quote: "The Community Advertising Group transformed our visibility. We're reaching customers we never could have reached before.",
+      quote: "Commune Marketing transformed our visibility. We're reaching customers we never could have reached before.",
       author: "Mike Thompson",
       business: "Barbershop Owner",
       image: "https://images.unsplash.com/photo-1610896011699-bf6f466b024e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXJzfGVufDB8fHx8MTc1MzMwOTk3OXww&ixlib=rb-4.1.0&q=85",
