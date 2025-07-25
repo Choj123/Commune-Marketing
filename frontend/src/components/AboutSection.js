@@ -14,8 +14,8 @@ const AboutSection = () => {
           >
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/flagged/photo-1576073460678-467d201c2c76?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxiYXJiZXJzaG9wJTIwVFZ8ZW58MHx8fHwxNzUzMzEwODk2fDA&ixlib=rb-4.1.0&q=85"
-                alt="Business with Flat Screen TV"
+                src="https://images.unsplash.com/photo-1708461646041-a606ea4b07c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxjb3p5JTIwY2FmZSUyMGludGVyaW9yfGVufDB8fHx8MTc1MzQ2Nzg4Nnww&ixlib=rb-4.1.0&q=85"
+                alt="Cozy Local Café Interior"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent rounded-2xl"></div>

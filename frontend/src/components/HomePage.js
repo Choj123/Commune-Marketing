@@ -6,7 +6,6 @@ import HowItWorksSection from './HowItWorksSection';
 import BenefitsSection from './BenefitsSection';
 import PricingSection from './PricingSection';
 import JoinCTASection from './JoinCTASection';
-import TestimonialsSection from './TestimonialsSection';
 import ContactFooter from './ContactFooter';
 import Navigation from './Navigation';
 
@@ -19,7 +18,6 @@ const HomePage = () => {
       <HowItWorksSection />
       <BenefitsSection />
       <PricingSection />
-      <TestimonialsSection />
       <JoinCTASection />
       <ContactFooter />
     </div>
