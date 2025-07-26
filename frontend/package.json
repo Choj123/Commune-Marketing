@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Choj123.github.io/Commune-Marketing",
   "dependencies": {
     "@headlessui/react": "^2.2.5",
     "@heroicons/react": "^2.2.0",
