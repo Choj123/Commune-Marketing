@@ -21,23 +21,35 @@ const JoinCTASection = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
+
+  const formElement = e.target;
+  const formDataToSend = new FormData(formElement);
 
   const response = await fetch("https://formspree.io/f/mrblqdvw", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name: formData.name,
-      businessName: formData.businessName,
-      phone: formData.phone,
-      email: formData.email,
-      plan: formData.plan,
-      infoSession: formData.infoSession ? "Yes" : "No"
-    })
+    body: formDataToSend
   });
+
+  if (response.ok) {
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        businessName: '',
+        phone: '',
+        email: '',
+        plan: 'Prime Monthly',
+        infoSession: false
+      });
+    }, 3000);
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+};
+
 
   if (response.ok) {
     setIsSubmitted(true);
