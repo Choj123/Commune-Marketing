@@ -21,13 +21,26 @@ const JoinCTASection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const response = await fetch("https://formspree.io/f/mrblqdvw", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: formData.name,
+      businessName: formData.businessName,
+      phone: formData.phone,
+      email: formData.email,
+      plan: formData.plan,
+      infoSession: formData.infoSession ? "Yes" : "No"
+    })
+  });
+
+  if (response.ok) {
     setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -39,7 +52,11 @@ const JoinCTASection = () => {
         infoSession: false
       });
     }, 3000);
-  };
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+};
+
 
   if (isSubmitted) {
     return (
