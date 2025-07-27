@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { emailConfig } from '../config/emailConfig';
 
 const JoinCTASection = () => {
   const [formData, setFormData] = useState({
@@ -30,11 +31,6 @@ const JoinCTASection = () => {
     setError('');
 
     try {
-      // EmailJS configuration - YOU NEED TO REPLACE THESE WITH YOUR ACTUAL VALUES
-      const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-      const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID  
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
-
       const templateParams = {
         to_email: 'marcochoj@communemarketingusa.com',
         from_name: formData.name,
@@ -46,7 +42,13 @@ const JoinCTASection = () => {
         message: `New join request from ${formData.name} (${formData.businessName}). Plan: ${formData.plan}. Phone: ${formData.phone}. Info session requested: ${formData.infoSession ? 'Yes' : 'No'}`
       };
 
-      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      await emailjs.send(
+        emailConfig.serviceID, 
+        emailConfig.templateID, 
+        templateParams, 
+        emailConfig.publicKey
+      );
+      
       setIsSubmitted(true);
       
       // Reset form after 5 seconds
