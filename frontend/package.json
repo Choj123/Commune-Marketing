@@ -46,7 +46,7 @@
      "globals": "15.15.0",
      "postcss": "^8.4.49",
      "tailwindcss": "^3.4.17",
-+    "gh-pages": "^6.0.0"
+     "gh-pages": "^6.0.0"
    },
    "packageManager": "yarn@1.22.22+sha512.a6b2f7…"
  }
