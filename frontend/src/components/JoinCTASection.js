@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const JoinCTASection = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const JoinCTASection = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -21,24 +24,50 @@ const JoinCTASection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        businessName: '',
-        phone: '',
-        email: '',
-        plan: 'Prime Monthly',
-        infoSession: false
-      });
-    }, 3000);
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // EmailJS configuration - YOU NEED TO REPLACE THESE WITH YOUR ACTUAL VALUES
+      const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+      const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID  
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+
+      const templateParams = {
+        to_email: 'marcochoj@communemarketingusa.com',
+        from_name: formData.name,
+        business_name: formData.businessName,
+        phone: formData.phone,
+        email: formData.email,
+        preferred_plan: formData.plan,
+        info_session: formData.infoSession ? 'Yes' : 'No',
+        message: `New join request from ${formData.name} (${formData.businessName}). Plan: ${formData.plan}. Phone: ${formData.phone}. Info session requested: ${formData.infoSession ? 'Yes' : 'No'}`
+      };
+
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      setIsSubmitted(true);
+      
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          businessName: '',
+          phone: '',
+          email: '',
+          plan: 'Prime Monthly',
+          infoSession: false
+        });
+      }, 5000);
+
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setError('Sorry, there was an error sending your message. Please try again or contact us directly at marcochoj@communemarketingusa.com');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
