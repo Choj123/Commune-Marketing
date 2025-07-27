@@ -2,74 +2,29 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const JoinCTASection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    businessName: '',
-    phone: '',
-    email: '',
-    plan: 'Prime Monthly',
-    infoSession: false
-  });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mrblqdvw", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      setIsSubmitted(true);
+      form.reset();
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const formElement = e.target;
-  const formDataToSend = new FormData(formElement);
-
-  const response = await fetch("https://formspree.io/f/mrblqdvw", {
-    method: "POST",
-    body: formDataToSend
-  });
-
-  if (response.ok) {
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        businessName: '',
-        phone: '',
-        email: '',
-        plan: 'Prime Monthly',
-        infoSession: false
-      });
-    }, 3000);
-  } else {
-    alert("Something went wrong. Please try again.");
-  }
-};
-
-
-  if (response.ok) {
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        businessName: '',
-        phone: '',
-        email: '',
-        plan: 'Prime Monthly',
-        infoSession: false
-      });
-    }, 3000);
-  } else {
-    alert("Something went wrong. Please try again.");
-  }
-};
-
-
+  // Replace your form inputs with uncontrolled ones:
   if (isSubmitted) {
     return (
       <section id="join" className="py-20 bg-emerald-600">
@@ -128,14 +83,12 @@ const handleSubmit = async (e) => {
                 <input
                   type="text"
                   name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
                   placeholder="Enter your full name"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Business Name *
@@ -143,8 +96,6 @@ const handleSubmit = async (e) => {
                 <input
                   type="text"
                   name="businessName"
-                  value={formData.businessName}
-                  onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
                   placeholder="Enter your business name"
@@ -160,14 +111,12 @@ const handleSubmit = async (e) => {
                 <input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
                   placeholder="(555) 123-4567"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Email Address *
@@ -175,8 +124,6 @@ const handleSubmit = async (e) => {
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
                   placeholder="your@email.com"
@@ -190,8 +137,6 @@ const handleSubmit = async (e) => {
               </label>
               <select
                 name="plan"
-                value={formData.plan}
-                onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
               >
                 <option value="Prime Monthly">Prime Monthly - $79.99/mo</option>
@@ -204,8 +149,6 @@ const handleSubmit = async (e) => {
               <input
                 type="checkbox"
                 name="infoSession"
-                checked={formData.infoSession}
-                onChange={handleInputChange}
                 className="w-5 h-5 text-emerald-600 border-slate-300 rounded focus:ring-emerald-500"
               />
               <label className="ml-3 text-slate-700">
@@ -228,3 +171,4 @@ const handleSubmit = async (e) => {
 };
 
 export default JoinCTASection;
+
