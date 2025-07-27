@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://choj123.github.io/Commune-Marketing",
   "dependencies": {
-    // all your dependencies
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    
   },
   "scripts": {
     "start": "craco start",
