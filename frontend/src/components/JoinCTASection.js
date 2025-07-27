@@ -6,12 +6,16 @@ const JoinCTASection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('✅ handleSubmit fired'); // ← debug log
 
     const form = e.target;
     const formData = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/mrblqdvw", {
+    const response = await fetch("https://formspree.io/f/meozkqoq", {
       method: "POST",
+      headers: {
+        Accept: "application/json",
+      },
       body: formData,
     });
 
@@ -24,7 +28,6 @@ const JoinCTASection = () => {
     }
   };
 
-  // Replace your form inputs with uncontrolled ones:
   if (isSubmitted) {
     return (
       <section id="join" className="py-20 bg-emerald-600">
@@ -40,7 +43,7 @@ const JoinCTASection = () => {
               Thank You for Your Interest!
             </h2>
             <p className="text-lg text-slate-600">
-              We'll be in touch within 24 hours to schedule your free virtual info session and get you started with the Community Advertising Group.
+              We'll be in touch within 24 hours to schedule your free virtual info session and get you started with the Commune Marketing Group.
             </p>
           </motion.div>
         </div>
@@ -74,7 +77,12 @@ const JoinCTASection = () => {
           viewport={{ once: true }}
           className="bg-white rounded-2xl p-8 shadow-2xl"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            action="https://formspree.io/f/meozkqoq"
+            method="POST"
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
@@ -88,7 +96,6 @@ const JoinCTASection = () => {
                   placeholder="Enter your full name"
                 />
               </div>
-
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Business Name *
@@ -116,7 +123,6 @@ const JoinCTASection = () => {
                   placeholder="(555) 123-4567"
                 />
               </div>
-
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Email Address *
@@ -139,9 +145,9 @@ const JoinCTASection = () => {
                 name="plan"
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
               >
-                <option value="Prime Monthly">Prime Monthly - $79.99/mo</option>
-                <option value="Ultimate Yearly">Ultimate Yearly - $849.99/yr</option>
-                <option value="Platinum+">Platinum+ - $999.99/yr</option>
+                <option value="Prime Monthly">Prime Monthly – $79.99/mo</option>
+                <option value="Ultimate Yearly">Ultimate Yearly – $849.99/yr</option>
+                <option value="Platinum+">Platinum+ – $999.99/yr</option>
               </select>
             </div>
 
