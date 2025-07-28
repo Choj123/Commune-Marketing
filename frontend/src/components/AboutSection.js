@@ -40,7 +40,7 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
               <p>
-                Welcome to the Community Advertising Group—a locally rooted, professionally run marketing network built to grow small businesses through real visibility.
+                Welcome to The Commune Marketing Group—a locally rooted, professionally run marketing network built to grow small businesses through real visibility.
               </p>
               <p>
                 We install and manage digital screens across the top-rated local businesses in your area, creating a loop of exposure where your ad is displayed—live and repeatedly—inside the places your customers already go.
