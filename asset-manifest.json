@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Commune-Marketing/static/css/main.6ed44f46.css",
-    "main.js": "/Commune-Marketing/static/js/main.55806aee.js",
+    "main.js": "/Commune-Marketing/static/js/main.aeed25a0.js",
     "index.html": "/Commune-Marketing/index.html",
     "main.6ed44f46.css.map": "/Commune-Marketing/static/css/main.6ed44f46.css.map",
-    "main.55806aee.js.map": "/Commune-Marketing/static/js/main.55806aee.js.map"
+    "main.aeed25a0.js.map": "/Commune-Marketing/static/js/main.aeed25a0.js.map"
   },
   "entrypoints": [
     "static/css/main.6ed44f46.css",
-    "static/js/main.55806aee.js"
+    "static/js/main.aeed25a0.js"
   ]
 }
